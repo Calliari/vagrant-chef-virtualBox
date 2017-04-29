@@ -23,18 +23,18 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-mkdir digital_outline
-cd digital_outline
-git clone git@github.com:Calliari/digital_outline_environment.git env
-git clone git@github.com:Calliari/digital_outlineApp.git app
+mkdir vagrant-chef-virtualBox_project
+cd vagrant-chef-virtualBox_project
+git clone git@github.com:Calliari/vagrant-chef-virtualBox.git environment
+
 ```
 
 ### Run Project
 
 ```
-cd env
-vagrant up
-vagrant ssh web
+cd environment
+vagrant up 
+vagrant ssh
 ```
 
 ### inside vagrant machine
@@ -44,6 +44,18 @@ cd /home/ubuntu/app
 npm install
 bower install
 node app.js
+```
+
+### get out of  vagrant machine 
+
+```
+exit
+```
+
+### a chain cmd to destroy and start a new vagrant machine 
+
+``` 
+vagrant destroy -f && vagrant ssh
 ```
 
 visit http://development.local/#!/ to view the app running in your browser
